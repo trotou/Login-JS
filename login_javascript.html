@@ -1,0 +1,36 @@
+<meta charset="UTF-8" />
+
+<script>
+
+var loginCorreto = "alura"
+var senhaCorreta = "alura321"
+	for(var primeiraTentativa = 1; primeiraTentativa <= 4; primeiraTentativa++) {
+		
+		if(primeiraTentativa > 3){
+			alert("numero de tentativas limite alcançado");
+			break;
+		}
+
+		var loginInformado = prompt("Informe seu login");
+		
+		if(loginInformado != loginCorreto) {
+			alert("Usuario não reconhecido");
+			continue;
+		} 
+		
+		var senhaInformada = prompt("Informe sua senha");
+
+		if(senhaInformada != senhaCorreta) {
+			alert("senha incorreta");
+			continue;
+		} else {
+			if(loginInformado == loginCorreto && senhaInformada == senhaCorreta) {
+				alert("Bem vindo " + loginInformado);
+				break;
+			}
+		}		
+}   
+			
+document.write("FIM")
+
+</script>
